@@ -14,7 +14,7 @@ class Post extends Model
 
     public $timestamps = true;
 
-    public function user(){
+    public function posts(){
         return $this->belongsTo('App\User');
     }
 }
