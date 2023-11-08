@@ -8,6 +8,15 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except'=>['index','show']]);
+    }
+    /**
      * Display a listing of the resource.
      */
     public function index()
@@ -65,6 +74,12 @@ class PostsController extends Controller
     public function edit(string $id)
     {
         $post = Post::find($id);
+
+        ##Check for correct user
+        if(auth()->user()->id !==$post->user_id)
+        {
+            return redirect('/posts')->with('error','Unauthorized page');
+        }
         return view('posts.edit')->with('post',$post);
     }
 
