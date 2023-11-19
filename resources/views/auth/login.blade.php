@@ -1,73 +1,64 @@
-@extends('layouts.app')
+@extends('layouts.header')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div class="bg-img">
+    <div class="content">
+       <header>Login Form</header>
+       <form method="POST" action="{{ route('login') }}">
+        @csrf
+        <div class="field">
+             <span class="fa fa-user"></span>
+             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          </div>
+          
+          
+        <div class="field space">
+             <span class="fa fa-lock"></span>
+             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+             <span class="show">SHOW</span>
+          </div>
+        
+        
+        <div class="pass">
+             <a href="#">Forgot Password?</a>
+          </div>
+        
+        
+          <div class="field">
+             <input type="submit" value="LOGIN">
+          </div>
+       </form>
+       <div class="login">
+          Or login with
+       </div>
+       <div class="links">
+          <div class="facebook">
+             <i class="fab fa-facebook-f"><span>Facebook</span></i>
+          </div>
+          <div class="instagram">
+             <i class="fab fa-instagram"><span>Instagram</span></i>
+          </div>
+       </div>
+       <div class="signup">
+          Don't have account?
+          <a href="/register">Signup Now</a>
+       </div>
     </div>
+ </div>
+     <script>
+        const pass_field = document.querySelector('.pass-key');
+        const showBtn = document.querySelector('.show');
+        showBtn.addEventListener('click', function(){
+         if(pass_field.type === "password"){
+           pass_field.type = "text";
+           showBtn.textContent = "HIDE";
+           showBtn.style.color = "#3498db";
+         }else{
+           pass_field.type = "password";
+           showBtn.textContent = "SHOW";
+           showBtn.style.color = "#222";
+         }
+        });
+     </script>
 </div>
 @endsection
