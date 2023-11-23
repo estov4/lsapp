@@ -1,6 +1,4 @@
-@extends('layouts.header')
-
-@section('content')
+@include('layouts.header')
 <div class="bg-img">
     <div class="content">
        <header>Login Form</header>
@@ -61,4 +59,3 @@
         });
      </script>
 </div>
-@endsection
