@@ -61,7 +61,7 @@
 				<div class="row-img">
 					<img src="images/mic.jpg">
 				</div>
-				<h4>Entertaiment</h4>
+				<a href="/Enter" class="btn"><h4>Entertaiment</h4></a>
 			</div>
 
 			<div class="row">
