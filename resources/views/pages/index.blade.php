@@ -61,35 +61,35 @@
 				<div class="row-img">
 					<img src="images/mic.jpg">
 				</div>
-				<h4>Entertaiment v1</h4>
+				<h4>Entertaiment</h4>
 			</div>
 
 			<div class="row">
 				<div class="row-img">
 					<img src="images/booo.jpg" >
 				</div>
-				<h4>Education v2.2</h4>
+				<h4>Education</h4>
 			</div>
 
 			<div class="row">
 				<div class="row-img">
 					<img src="images/scc.jpg">
 				</div>
-				<h4>Science bhgu</h4>
+				<h4>Science</h4>
 			</div>
 
 			<div class="row">
 				<div class="row-img">
 					<img src="images/he.jpg">
 				</div>
-				<h4>Social bn</h4>
+				<h4>Social</h4>
 			</div>
 
 			<div class="row">
 				<div class="row-img">
 					<img src="images/wh.jpg">
 				</div>
-				<h4>Sport man</h4>
+				<h4>Sport</h4>
 			</div>
 
 		</div>
