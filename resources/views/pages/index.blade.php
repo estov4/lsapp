@@ -7,7 +7,7 @@
     <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Eventsnes</title>
+	<title>Eventsnes hhhh</title>
 
 	<link rel="stylesheet"  type="text/css" href="css/style.css">
 
@@ -61,7 +61,7 @@
 				<div class="row-img">
 					<img src="images/mic.jpg">
 				</div>
-				<h4>Entertaiment</h4>
+				<a href="/Enter" class="btn"><h4>Entertaiment</h4></a>
 			</div>
 
 			<div class="row">
