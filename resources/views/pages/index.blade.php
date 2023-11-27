@@ -28,7 +28,7 @@
 	<header>
 		<a href="#" class="logo">EVENTS<span>nes</span></a>
 		<ul class="navbar">
-			<li><a href="#">Home</a></li>
+			<li><a href="#">Homeeee</a></li>
 			<li><a href="/about">About</a></li>
 			<li><a href="#">Contact</a></li>
 			
