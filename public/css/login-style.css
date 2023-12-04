@@ -39,19 +39,20 @@
   margin: 0 0 35px 0;
   font-family: 'Montserrat',sans-serif;
 }
-.field{
+.field {
   position: relative;
-  height: 45px;
+  height: 40px; /* Increase the height for better spacing */
   width: 100%;
   display: flex;
-  background: rgba(255,255,255,0.94);
+  background: rgba(255, 255, 255, 0.94);
+  margin-bottom: 15px; /* Add margin to create space between fields */
 }
 .field span{
   color: #222;
   width: 40px;
   line-height: 45px;
 }
-.field input{
+.field input {
   height: 100%;
   width: 100%;
   background: transparent;
@@ -59,10 +60,11 @@
   outline: none;
   color: #222;
   font-size: 16px;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10px; /* Add left margin for spacing */
 }
-.space{
-  margin-top: 16px;
+.space {
+  margin-top: 20px; /* Increase margin-top for better separation */
 }
 .show{
   position: absolute;
